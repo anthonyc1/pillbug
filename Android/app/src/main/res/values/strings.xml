@@ -1,3 +1,17 @@
 <resources>
-    <string name="app_name">Pillbox</string>
+    <string name="app_name">PILLBUG</string>
+    <string name="patient_title">Patient:</string>
+    <string name="status_title">Status:</string>
+    <string name="am_title">AM:</string>
+    <string name="pm_title">PM:</string>
+    <string name="notes_title">Notes:</string>
+    <string name="status_good">Good</string>
+    <string name="status_bad">Bad</string>
+    <string name="status_taken">Taken</string>
+    <string name="status_scheduled">Scheduled</string>
+    <string name="status_missed">Missed</string>
+    <string name="status_none">None</string>
+
+    <string name="curr_month">April 2018</string>
+    <string name="curr_date">Sunday, April 7th</string>
 </resources>
