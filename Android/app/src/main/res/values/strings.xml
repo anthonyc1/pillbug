@@ -12,6 +12,11 @@
     <string name="status_missed">Missed</string>
     <string name="status_none">None</string>
 
+    <string name="left_arrow">\u003C</string>
+    <string name="right_arrow">\u003E</string>
+
+    <string name="login_title">Login</string>
+
     <string name="curr_month">April 2018</string>
     <string name="curr_date">Sunday, April 7th</string>
 </resources>

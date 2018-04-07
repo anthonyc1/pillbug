@@ -45,7 +45,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/montserrat_bold"
-            android:text="<"
+            android:text="\u003C"
             android:textSize="24sp" />
         <Space
             android:layout_width="wrap_content"
@@ -65,7 +65,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/montserrat_bold"
-            android:text=">"
+            android:text="\u003E"
             android:textSize="24sp" />
         <Space
             android:layout_width="wrap_content"
@@ -87,7 +87,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/sans-serif"
+            android:fontFamily="sans-serif"
             android:text="S"
             android:textSize="24sp" />
         <Space
@@ -97,7 +97,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/sans-serif"
+            android:fontFamily="sans-serif"
             android:text="M"
             android:textSize="24sp" />
         <Space
@@ -107,7 +107,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/sans-serif"
+            android:fontFamily="sans-serif"
             android:text="Tu"
             android:textSize="24sp" />
         <Space
@@ -117,7 +117,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/sans-serif"
+            android:fontFamily="sans-serif"
             android:text="W"
             android:textSize="24sp" />
         <Space
@@ -127,7 +127,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/sans-serif"
+            android:fontFamily="sans-serif"
             android:text="Th"
             android:textSize="24sp" />
         <Space
@@ -137,7 +137,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/sans-serif"
+            android:fontFamily="sans-serif"
             android:text="F"
             android:textSize="24sp" />
         <Space
@@ -147,7 +147,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/sans-serif"
+            android:fontFamily="sans-serif"
             android:text="S"
             android:textSize="24sp" />
         <Space
@@ -299,7 +299,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="60sp"
-        android:layout_marginBottom="-20sp"
+        android:layout_marginBottom="-50sp"
         android:background="@drawable/layout_bg"
         android:orientation="vertical">
 
