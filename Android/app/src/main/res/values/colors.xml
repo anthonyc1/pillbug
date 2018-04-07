@@ -4,4 +4,8 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="appColor">#F06292</color>
+    <color name="whiteColor">#FFFFFF</color>
+    <color name="blackColor">#000000</color>
+    <color name="gradientStart">#F06291</color>
+    <color name="gradientEnd">#F8BBD0</color>
 </resources>

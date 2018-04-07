@@ -20,9 +20,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/montserrat_bold"
+            android:fontFamily="@font/montserrat"
             android:text="@string/app_name"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:textColor="@color/blackColor"/>/>
 
         <Space
             android:layout_width="wrap_content"
@@ -46,7 +47,8 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/montserrat_bold"
             android:text="\u003C"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:textColor="@color/blackColor"/>/>
         <Space
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -56,7 +58,8 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/montserrat"
             android:text="@string/curr_month"
-            android:textSize="24sp" />
+            android:textColor="@color/blackColor"/>
+            android:textSize="20sp" />
         <Space
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -66,7 +69,8 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/montserrat_bold"
             android:text="\u003E"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:textColor="@color/blackColor"/>/>
         <Space
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -89,7 +93,8 @@
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif"
             android:text="S"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:textColor="@color/blackColor"/>/>
         <Space
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -99,7 +104,8 @@
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif"
             android:text="M"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:textColor="@color/blackColor"/>/>
         <Space
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -109,7 +115,8 @@
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif"
             android:text="Tu"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:textColor="@color/blackColor"/>/>
         <Space
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -119,7 +126,8 @@
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif"
             android:text="W"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:textColor="@color/blackColor"/>/>
         <Space
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -129,7 +137,8 @@
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif"
             android:text="Th"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:textColor="@color/blackColor"/>/>
         <Space
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -139,7 +148,8 @@
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif"
             android:text="F"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:textColor="@color/blackColor"/>
         <Space
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -149,7 +159,88 @@
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif"
             android:text="S"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:textColor="@color/blackColor"/>/>
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <!--<GridView xmlns:android="http://schemas.android.com/apk/res/android"-->
+        <!--android:id="@+id/gridview"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="200dp"-->
+        <!--android:columnWidth="90dp"-->
+        <!--android:numColumns="7"-->
+        <!--android:verticalSpacing="10dp"-->
+        <!--android:horizontalSpacing="5dp"-->
+        <!--android:stretchMode="columnWidth"-->
+        <!--android:gravity="center"-->
+        <!--/>-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:orientation="horizontal">
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/box" />
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/box" />
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/box" />
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/box" />
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/box" />
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/box" />
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/box" />
         <Space
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -168,125 +259,56 @@
             android:layout_height="wrap_content"
             android:layout_weight="1" />
         <TextView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:background="@drawable/box" />
         <Space
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
         <TextView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:background="@drawable/box" />
         <Space
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
         <TextView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:background="@drawable/box" />
         <Space
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
         <TextView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:background="@drawable/box" />
         <Space
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
         <TextView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:background="@drawable/box" />
         <Space
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
         <TextView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:background="@drawable/box" />
         <Space
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
         <TextView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:background="@drawable/box" />
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10sp"
-        android:orientation="horizontal">
-
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-        <TextView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:background="@drawable/box" />
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-        <TextView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:background="@drawable/box" />
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-        <TextView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:background="@drawable/box" />
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-        <TextView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:background="@drawable/box" />
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-        <TextView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:background="@drawable/box" />
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-        <TextView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:background="@drawable/box" />
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-        <TextView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:background="@drawable/box" />
         <Space
             android:layout_width="wrap_content"
@@ -298,7 +320,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="60sp"
+        android:layout_marginTop="50sp"
         android:layout_marginBottom="-50sp"
         android:background="@drawable/layout_bg"
         android:orientation="vertical">
@@ -316,7 +338,8 @@
                 android:layout_marginLeft="20sp"
                 android:fontFamily="@font/quicksand_medium"
                 android:text="@string/patient_title"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:textColor="@color/whiteColor"/>
             <TextView
                 android:id="@+id/status"
                 android:layout_width="match_parent"
@@ -325,11 +348,13 @@
                 android:layout_marginLeft="20sp"
                 android:fontFamily="@font/quicksand_medium"
                 android:text="@string/status_title"
-                android:textSize="36sp" />
+                android:textSize="36sp"
+                android:textColor="@color/whiteColor"/>
             <Space
                 android:layout_width="wrap_content"
                 android:layout_height="5dp"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:textColor="@color/whiteColor"/>
             <TextView
                 android:id="@+id/am"
                 android:layout_width="match_parent"
@@ -338,7 +363,8 @@
                 android:layout_marginLeft="20sp"
                 android:fontFamily="@font/quicksand_medium"
                 android:text="@string/am_title"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:textColor="@color/whiteColor"/>
             <Space
                 android:layout_width="wrap_content"
                 android:layout_height="10dp"
@@ -351,7 +377,8 @@
                 android:layout_marginLeft="20sp"
                 android:fontFamily="@font/quicksand_medium"
                 android:text="@string/pm_title"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:textColor="@color/whiteColor"/>
             <Space
                 android:layout_width="wrap_content"
                 android:layout_height="10dp"
@@ -364,7 +391,8 @@
                 android:layout_marginLeft="20sp"
                 android:fontFamily="@font/quicksand_medium"
                 android:text="@string/notes_title"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:textColor="@color/whiteColor"/>
 
         </LinearLayout>
 
