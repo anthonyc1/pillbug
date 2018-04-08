@@ -45,6 +45,10 @@ public class WeekView extends AppCompatActivity {
         startActivity(new Intent(WeekView.this, CalendarView.class));
     }
 
+    public void logout(View v){
+        startActivity(new Intent(WeekView.this, MainActivity.class));
+    }
+
     public void getHttp(View v) {
         Object name = new WeekView.OkHttpAync().execute(this, "get", "");
         //myText.setText(name.toString());

@@ -30,6 +30,9 @@ public class CalendarView extends AppCompatActivity {
     public void viewWeek(View v){
         startActivity(new Intent(CalendarView.this, WeekView.class));
     }
+    public void logout(View v){
+        startActivity(new Intent(CalendarView.this, MainActivity.class));
+    }
 
     public void getHttp(View v) {
         Object name = new CalendarView.OkHttpAync().execute(this, "get", "");

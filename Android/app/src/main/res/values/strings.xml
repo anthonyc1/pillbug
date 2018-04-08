@@ -19,4 +19,7 @@
 
     <string name="curr_month">April 2018</string>
     <string name="curr_date">Sunday, April 7th</string>
+
+    <string name="username">\Username: </string>
+    <string name="password">\Password: </string>
 </resources>
