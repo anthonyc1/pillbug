@@ -34,7 +34,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
         <Space
             android:layout_width="wrap_content"
@@ -45,7 +45,7 @@
             android:id="@+id/username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20sp"
+            android:layout_marginLeft="40sp"
             android:fontFamily="@font/quicksand_medium"
             android:text="@string/username"
             android:textColor="@color/whiteColor"
@@ -60,7 +60,7 @@
             android:id="@+id/usernameInput"
             android:layout_width="300dp"
             android:layout_height="40dp"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="40dp"
             android:background="@color/whiteColor"
             android:inputType="textCapSentences|textAutoCorrect" />
 
@@ -73,8 +73,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:orientation="horizontal">
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
 
         <Space
             android:layout_width="wrap_content"
@@ -85,7 +85,7 @@
             android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20sp"
+            android:layout_marginLeft="40sp"
             android:fontFamily="@font/quicksand_medium"
             android:text="@string/password"
             android:textColor="@color/whiteColor"
@@ -98,11 +98,11 @@
 
         <EditText
             android:id="@+id/passwordInput"
-            android:layout_width="match_parent"
+            android:layout_width="300dp"
             android:layout_height="40dp"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="40dp"
             android:background="@color/whiteColor"
-            android:inputType="textCapSentences|textAutoCorrect" />
+            android:inputType="textPassword" />
 
         <Space
             android:layout_width="wrap_content"
@@ -118,7 +118,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="50sp"
+            android:layout_marginTop="30sp"
             android:orientation="horizontal">
             <Space
                 android:layout_width="wrap_content"

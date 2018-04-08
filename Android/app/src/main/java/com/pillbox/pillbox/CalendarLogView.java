@@ -26,7 +26,10 @@ import com.prolificinteractive.materialcalendarview.OnDateSelectedListener;
 
 public class CalendarLogView extends AppCompatActivity {
 
-    TextView amView, pmView, notesView;
+    TextView amView, pmView, notesView, dateView;
+    String url1 = "https://webhooks.mongodb-stitch.com/api/client/v2.0/app/pillbugapp-ylegd/service/addSchedule/incoming_webhook/getSchedule?secret=panda";
+    String url2 = "https://webhooks.mongodb-stitch.com/api/client/v2.0/app/pillbugapp-ylegd/service/addSchedule/incoming_webhook/getSchedule?secret=panda";
+    String url3 = "https://webhooks.mongodb-stitch.com/api/client/v2.0/app/pillbugapp-ylegd/service/addSchedule/incoming_webhook/getSchedule?secret=panda";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +38,7 @@ public class CalendarLogView extends AppCompatActivity {
         amView = (TextView) findViewById(R.id.am);
         pmView = (TextView) findViewById(R.id.pm);
         notesView = (TextView) findViewById(R.id.notes);
+        dateView = (TextView) findViewById(R.id.date);
 
         MaterialCalendarView calendarView = findViewById(R.id.calendarView1);
 
@@ -42,10 +46,16 @@ public class CalendarLogView extends AppCompatActivity {
             @Override
             public void onDateSelected(@NonNull MaterialCalendarView widget, @NonNull CalendarDay date, boolean selected) {
                 if (date.getYear() == 2018 && date.getMonth()+1 == 4){
-                    if (date.getDay() == 8) {
+                    if (date.getDay() == 6) {
                         //Log.w("LOL", "got the 4/8");
-                        new CalendarLogView.OkHttpAync().execute(CalendarLogView.this.getApplicationContext(), "get", "");
-                        //Toast.makeText(CalendarLogView.this, "got it", Toast.LENGTH_SHORT).show();
+                        new CalendarLogView.OkHttpAync().execute(CalendarLogView.this.getApplicationContext(), "get", url1);
+                        Toast.makeText(CalendarLogView.this, "got it", Toast.LENGTH_SHORT).show();
+                    } else if (date.getDay() == 7) {
+                        new CalendarLogView.OkHttpAync().execute(CalendarLogView.this.getApplicationContext(), "get", url2);
+                        Toast.makeText(CalendarLogView.this, "got it", Toast.LENGTH_SHORT).show();
+                    } else if (date.getDay() == 8){
+                        new CalendarLogView.OkHttpAync().execute(CalendarLogView.this.getApplicationContext(), "get", url3);
+                        Toast.makeText(CalendarLogView.this, "got it", Toast.LENGTH_SHORT).show();
                     }
                 }
             }
@@ -59,8 +69,8 @@ public class CalendarLogView extends AppCompatActivity {
         startActivity(new Intent(CalendarLogView.this, MainActivity.class));
     }
 
-    public void getHttp(View v) {
-        Object name = new CalendarLogView.OkHttpAync().execute(this.getApplicationContext(), "get", "");
+    public void getHttp(View v, String url) {
+        Object name = new CalendarLogView.OkHttpAync().execute(this.getApplicationContext(), "get", url);
         //myText.setText(name.toString());
     }
 
@@ -72,20 +82,18 @@ public class CalendarLogView extends AppCompatActivity {
         protected Object doInBackground(Object... params) {
             contx = (Context) params[0];
             String requestType = (String) params[1];
-            String requestParam = (String) params[2];
+            String url = (String) params[2];
 
             if ("get".equals(requestType)) {
-                return getHttpResponse();
+                return getHttpResponse(url);
             }
             return null;
         }
     }
 
-    public String getHttpResponse() {
+    public String getHttpResponse(String url) {
         try {
             OkHttpClient client = new OkHttpClient();
-
-            String url = "https://webhooks.mongodb-stitch.com/api/client/v2.0/app/pillbugapp-ylegd/service/addSchedule/incoming_webhook/getSchedule?secret=panda";
 
             Request request = new Request.Builder()
                     .url(url)
@@ -96,9 +104,10 @@ public class CalendarLogView extends AppCompatActivity {
                 response = client.newCall(request).execute();
                 // This the the text obtained from GET request
                 final String myResponse = response.body().string();
-                final String am, pm, note;
+                final String am, pm, note, date;
                 JSONObject jsonObject = new JSONObject(myResponse);
                 // Values
+                date = jsonObject.getString("date");
                 am = jsonObject.getString("am");
                 pm = jsonObject.getString("pm");
                 note = jsonObject.getString("note");
@@ -109,6 +118,7 @@ public class CalendarLogView extends AppCompatActivity {
                         amView.setText("AM: "+am);
                         pmView.setText("PM: "+pm);
                         notesView.setText("Note: "+note);
+                        dateView.setText("Date: "+date);
                     }
                 });
                 return am;
