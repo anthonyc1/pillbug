@@ -195,22 +195,22 @@ public class WeekView extends AppCompatActivity {
     public void populateVirtualPillBox(String val, TextView t){
         switch (val){
             case "taken":
-                t.setBackgroundResource(R.color.greenColor);
+                t.setBackgroundResource(R.drawable.greenbox);
                 t.setText("");
                 t.setTextSize(24);
                 break;
             case "scheduled":
-                t.setBackgroundResource(R.color.greenColor);
+                t.setBackgroundResource(R.drawable.greenbox);
                 t.setText("o");
                 t.setTextSize(24);
                 break;
             case "missed":
-                t.setBackgroundResource(R.color.redColor);
+                t.setBackgroundResource(R.drawable.redbox);
                 t.setText("o");
                 t.setTextSize(24);
                 break;
             case "overdose":
-                t.setBackgroundResource(R.color.redColor);
+                t.setBackgroundResource(R.drawable.redbox);
                 t.setText("");
                 t.setTextSize(24);
                 break;
