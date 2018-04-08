@@ -408,7 +408,8 @@
                 android:fontFamily="@font/quicksand_medium"
                 android:text="@string/notes_title"
                 android:textSize="24sp"
-                android:textColor="@color/whiteColor"/>
+                android:textColor="@color/whiteColor"
+                android:onClick="getHttp"/>
             <EditText
                 android:id="@+id/message"
                 android:layout_marginLeft="20dp"
