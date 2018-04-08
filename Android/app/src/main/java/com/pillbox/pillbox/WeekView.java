@@ -28,14 +28,17 @@ import okhttp3.Response;
 
 public class WeekView extends AppCompatActivity {
 
-    TextView myText;
-    String myResult;
+    TextView patientView, statusView, amView, pmView, notesView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.week_view);
-        myText = (TextView) findViewById(R.id.message);
+        patientView = (TextView) findViewById(R.id.patientText);
+        statusView = (TextView) findViewById(R.id.statusText);
+        amView = (TextView) findViewById(R.id.amText);
+        pmView = (TextView) findViewById(R.id.pmText);
+        notesView = (TextView) findViewById(R.id.notesText);
     }
 
     public void viewCalendar(View v) {
@@ -47,7 +50,6 @@ public class WeekView extends AppCompatActivity {
         //myText.setText(name.toString());
     }
 
-    // Call this method
     private class OkHttpAync extends AsyncTask<Object, Void, Object> {
 
         private Context contx;
@@ -80,19 +82,29 @@ public class WeekView extends AppCompatActivity {
                 response = client.newCall(request).execute();
                 // This the the text obtained from GET request
                 final String myResponse = response.body().string();
-                final String name;
+                final String patient, days, am, pm, email, start, end, note;
                 JSONObject jsonObject = new JSONObject(myResponse);
                 // Values
-                name = jsonObject.getString("email");
-                System.out.println(name);
+                email = jsonObject.getString("email");
+                days = jsonObject.getString("days");
+                am = jsonObject.getString("am");
+                pm = jsonObject.getString("pm");
+                start = jsonObject.getString("start");
+                end = jsonObject.getString("end");
+                note = jsonObject.getString("note");
+                patient = jsonObject.getString("patient");
                                             // Output to activity
                 WeekView.this.runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        myText.setText(name);
+                        patientView.setText(patient);
+//                        statusView.setText(status);
+                        amView.setText(am);
+                        pmView.setText(pm);
+                        notesView.setText(note);
                     }
                 });
-                return name;
+                return patient;
             } catch (Exception e) {
                 e.printStackTrace();
             }

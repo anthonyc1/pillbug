@@ -43,9 +43,10 @@
             android:layout_width="5dp"
             android:layout_height="40dp"
             android:layout_weight=".5"
-            android:background="@drawable/more"
+            android:background="@drawable/refresh"
             tools:layout_editor_absoluteX="194dp"
-            tools:layout_editor_absoluteY="239dp" />
+            tools:layout_editor_absoluteY="239dp"
+            android:onClick="getHttp"/>
     </LinearLayout>
 
     <com.prolificinteractive.materialcalendarview.MaterialCalendarView
@@ -71,7 +72,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/patient"
+                android:id="@+id/date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20sp"
@@ -93,6 +94,15 @@
                 android:text="@string/am_title"
                 android:textSize="24sp"
                 android:textColor="@color/whiteColor"/>
+            <TextView
+                android:id="@+id/amText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:fontFamily="@font/quicksand_medium"
+                android:text=""
+                android:textSize="24sp"
+                android:textColor="@color/whiteColor"/>
             <Space
                 android:layout_width="wrap_content"
                 android:layout_height="10dp"
@@ -106,6 +116,15 @@
                 android:text="@string/pm_title"
                 android:textSize="24sp"
                 android:textColor="@color/whiteColor"/>
+            <TextView
+                android:id="@+id/pmText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:fontFamily="@font/quicksand_medium"
+                android:text=""
+                android:textSize="24sp"
+                android:textColor="@color/whiteColor"/>
             <Space
                 android:layout_width="wrap_content"
                 android:layout_height="10dp"
@@ -117,6 +136,15 @@
                 android:layout_marginLeft="20sp"
                 android:fontFamily="@font/quicksand_medium"
                 android:text="@string/notes_title"
+                android:textSize="24sp"
+                android:textColor="@color/whiteColor"/>
+            <TextView
+                android:id="@+id/notesText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:fontFamily="@font/quicksand_medium"
+                android:text=""
                 android:textSize="24sp"
                 android:textColor="@color/whiteColor"/>
 

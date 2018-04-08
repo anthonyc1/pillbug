@@ -42,9 +42,10 @@
             android:layout_width="5dp"
             android:layout_height="40dp"
             android:layout_weight=".5"
-            android:background="@drawable/more"
+            android:background="@drawable/refresh"
             tools:layout_editor_absoluteX="194dp"
-            tools:layout_editor_absoluteY="239dp" />
+            tools:layout_editor_absoluteY="239dp"
+            android:onClick="getHttp"/>
 
     </LinearLayout>
 
@@ -357,6 +358,15 @@
                 android:textSize="24sp"
                 android:textColor="@color/whiteColor"/>
             <TextView
+                android:id="@+id/patientText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:fontFamily="@font/quicksand_medium"
+                android:text=""
+                android:textSize="24sp"
+                android:textColor="@color/whiteColor"/>
+            <TextView
                 android:id="@+id/status"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -365,6 +375,15 @@
                 android:fontFamily="@font/quicksand_medium"
                 android:text="@string/status_title"
                 android:textSize="36sp"
+                android:textColor="@color/whiteColor"/>
+            <TextView
+                android:id="@+id/statusText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:fontFamily="@font/quicksand_medium"
+                android:text=""
+                android:textSize="42sp"
                 android:textColor="@color/whiteColor"/>
             <Space
                 android:layout_width="wrap_content"
@@ -375,10 +394,18 @@
                 android:id="@+id/am"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
                 android:layout_marginLeft="20sp"
                 android:fontFamily="@font/quicksand_medium"
                 android:text="@string/am_title"
+                android:textSize="24sp"
+                android:textColor="@color/whiteColor"/>
+            <TextView
+                android:id="@+id/amText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:fontFamily="@font/quicksand_medium"
+                android:text=""
                 android:textSize="24sp"
                 android:textColor="@color/whiteColor"/>
             <Space
@@ -389,10 +416,18 @@
                 android:id="@+id/pm"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
                 android:layout_marginLeft="20sp"
                 android:fontFamily="@font/quicksand_medium"
                 android:text="@string/pm_title"
+                android:textSize="24sp"
+                android:textColor="@color/whiteColor"/>
+            <TextView
+                android:id="@+id/pmText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:fontFamily="@font/quicksand_medium"
+                android:text=""
                 android:textSize="24sp"
                 android:textColor="@color/whiteColor"/>
             <Space
@@ -403,23 +438,21 @@
                 android:id="@+id/notes"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
                 android:layout_marginLeft="20sp"
                 android:fontFamily="@font/quicksand_medium"
                 android:text="@string/notes_title"
                 android:textSize="24sp"
                 android:textColor="@color/whiteColor"
-                android:onClick="getHttp"/>
-            <EditText
-                android:id="@+id/message"
-                android:layout_marginLeft="20dp"
-                android:layout_width="300dp"
-                android:layout_height="40dp"
-                android:background="@color/whiteColor"
-                android:inputType=
-                    "textCapSentences|textAutoCorrect" />
-
-
+                />
+            <TextView
+                android:id="@+id/notesText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:fontFamily="@font/quicksand_medium"
+                android:text=""
+                android:textSize="24sp"
+                android:textColor="@color/whiteColor"/>
         </LinearLayout>
 
     </LinearLayout>
