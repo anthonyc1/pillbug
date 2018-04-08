@@ -45,11 +45,12 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1" />
             <Button
-                android:id="@+id/button_id"
+                android:id="@+id/login_button"
                 android:layout_height="wrap_content"
                 android:layout_width="200dp"
                 android:layout_weight="1"
-                android:text="@string/login_title" />
+                android:text="@string/login_title"
+                android:onClick="login"/>
             <Space
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
