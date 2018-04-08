@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".WeekView">
+    tools:context=".CalendarView">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,8 +16,8 @@
         <ImageView
             android:id="@+id/home"
             android:layout_width="1dp"
-            android:layout_height="30dp"
-            android:layout_weight="1"
+            android:layout_height="35dp"
+            android:layout_weight=".5"
             android:background="@drawable/day"
             tools:layout_editor_absoluteX="194dp"
             tools:layout_editor_absoluteY="239dp"
@@ -41,7 +41,7 @@
             android:id="@+id/setting"
             android:layout_width="5dp"
             android:layout_height="40dp"
-            android:layout_weight="1"
+            android:layout_weight=".5"
             android:background="@drawable/more"
             tools:layout_editor_absoluteX="194dp"
             tools:layout_editor_absoluteY="239dp" />
