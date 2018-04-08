@@ -208,6 +208,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1" />
         <TextView
+            android:id="@+id/Sunday_AM"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:background="@drawable/box" />
@@ -216,6 +217,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1" />
         <TextView
+            android:id="@+id/Monday_AM"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:background="@drawable/box" />
@@ -224,6 +226,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1" />
         <TextView
+            android:id="@+id/Tuesday_AM"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:background="@drawable/box" />
@@ -232,6 +235,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1" />
         <TextView
+            android:id="@+id/Wednesday_AM"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:background="@drawable/box" />
@@ -240,6 +244,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1" />
         <TextView
+            android:id="@+id/Thursday_AM"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:background="@drawable/box" />
@@ -248,6 +253,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1" />
         <TextView
+            android:id="@+id/Friday_AM"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:background="@drawable/box" />
@@ -256,6 +262,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1" />
         <TextView
+            android:id="@+id/Saturday_AM"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:background="@drawable/box" />
@@ -277,6 +284,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1" />
         <TextView
+            android:id="@+id/Sunday_PM"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:background="@drawable/box" />
@@ -285,6 +293,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1" />
         <TextView
+            android:id="@+id/Monday_PM"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:background="@drawable/box" />
@@ -293,6 +302,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1" />
         <TextView
+            android:id="@+id/Tuesday_PM"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:background="@drawable/box" />
@@ -301,6 +311,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1" />
         <TextView
+            android:id="@+id/Wednesday_PM"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:background="@drawable/box" />
@@ -309,6 +320,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1" />
         <TextView
+            android:id="@+id/Thursday_PM"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:background="@drawable/box" />
@@ -317,6 +329,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1" />
         <TextView
+            android:id="@+id/Friday_PM"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:background="@drawable/box" />
@@ -325,6 +338,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1" />
         <TextView
+            android:id="@+id/Saturday_PM"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:background="@drawable/box" />
@@ -366,7 +380,7 @@
                 android:layout_marginLeft="20sp"
                 android:fontFamily="@font/quicksand_medium"
                 android:text="@string/status_title"
-                android:textSize="36sp"
+                android:textSize="45sp"
                 android:textColor="@color/whiteColor"/>
             <Space
                 android:layout_width="wrap_content"

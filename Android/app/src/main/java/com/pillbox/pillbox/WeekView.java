@@ -12,6 +12,7 @@ import android.widget.GridView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
@@ -19,6 +20,7 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -29,6 +31,8 @@ import okhttp3.Response;
 public class WeekView extends AppCompatActivity {
 
     TextView patientView, statusView, amView, pmView, notesView;
+    TextView Sunday_AM, Monday_AM, Tuesday_AM, Wednesday_AM, Thursday_AM, Friday_AM, Saturday_AM;
+    TextView Sunday_PM, Monday_PM, Tuesday_PM, Wednesday_PM, Thursday_PM, Friday_PM, Saturday_PM;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +43,22 @@ public class WeekView extends AppCompatActivity {
         amView = (TextView) findViewById(R.id.am);
         pmView = (TextView) findViewById(R.id.pm);
         notesView = (TextView) findViewById(R.id.notes);
+
+        Sunday_AM = (TextView) findViewById(R.id.Sunday_AM);
+        Monday_AM = (TextView) findViewById(R.id.Monday_AM);
+        Tuesday_AM = (TextView) findViewById(R.id.Tuesday_AM);
+        Wednesday_AM = (TextView) findViewById(R.id.Wednesday_AM);
+        Thursday_AM = (TextView) findViewById(R.id.Thursday_AM);
+        Friday_AM = (TextView) findViewById(R.id.Friday_AM);
+        Saturday_AM = (TextView) findViewById(R.id.Saturday_AM);
+
+        Sunday_PM = (TextView) findViewById(R.id.Sunday_PM);
+        Monday_PM = (TextView) findViewById(R.id.Monday_PM);
+        Tuesday_PM = (TextView) findViewById(R.id.Tuesday_PM);
+        Wednesday_PM = (TextView) findViewById(R.id.Wednesday_PM);
+        Thursday_PM = (TextView) findViewById(R.id.Thursday_PM);
+        Friday_PM = (TextView) findViewById(R.id.Friday_PM);
+        Saturday_PM = (TextView) findViewById(R.id.Saturday_PM);
     }
 
     public void viewCalendar(View v) {
@@ -86,22 +106,80 @@ public class WeekView extends AppCompatActivity {
                 response = client.newCall(request).execute();
                 // This the the text obtained from GET request
                 final String myResponse = response.body().string();
-                final String patient, days, am, pm, email, start, end, note;
+                final String patient, am, pm,  note;
+                final JSONArray daysJSONArray;
+                final String[] daysArray;
+
+                final TextView[] textviewArray = new TextView[14];
+
                 JSONObject jsonObject = new JSONObject(myResponse);
                 // Values
                 am = jsonObject.getString("am");
                 pm = jsonObject.getString("pm");
                 note = jsonObject.getString("note");
                 patient = jsonObject.getString("patient");
-                                            // Output to activity
+
+                daysJSONArray = jsonObject.getJSONArray("days");
+                int length = daysJSONArray.length();
+                daysArray = new String[length];
+
+                for (int i = 0; i < length; i++){
+                    daysArray[i] = daysJSONArray.getString(i);
+                }
+
+                textviewArray[0] = Sunday_AM;
+                textviewArray[1] = Sunday_PM;
+                textviewArray[2] = Monday_AM;
+                textviewArray[3] = Monday_PM;
+                textviewArray[4] = Tuesday_AM;
+                textviewArray[5] = Tuesday_PM;
+                textviewArray[6] = Wednesday_AM;
+                textviewArray[7] = Wednesday_PM;
+                textviewArray[8] = Thursday_AM;
+                textviewArray[9] = Thursday_PM;
+                textviewArray[10] = Friday_AM;
+                textviewArray[11] = Friday_PM;
+                textviewArray[12] = Saturday_AM;
+                textviewArray[13] = Saturday_PM;
+
+                // Output to activity
                 WeekView.this.runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
                         patientView.setText("Patient: "+patient);
-//                        statusView.setText("Status: "+status);
+
                         amView.setText("AM: "+am);
                         pmView.setText("PM: "+pm);
                         notesView.setText("Note: "+note);
+
+                        for (int j = 0; j < 14; j++){
+                            populateVirtualPillBox(daysArray[j], textviewArray[j]);
+                        }
+
+                        String s, status = "Good";
+                        boolean b;
+                        try {
+                            for (int i = 0; i < 14; i++){
+                                s = daysJSONArray.getString(i);
+                                if (s.equalsIgnoreCase("missed") || s.equalsIgnoreCase("overdosed")){
+                                    status = "Bad";
+                                    break;
+                                }
+                            }
+                        } catch (Exception e){
+                            e.printStackTrace();
+                        } finally {
+                            if (status.equalsIgnoreCase("Bad")){
+                                statusView.setText("Status: "+status);
+                                statusView.setTextColor(getResources().getColor(R.color.redTextColor));
+                            } else {
+                                statusView.setText("Status: "+status);
+                                statusView.setTextColor(getResources().getColor(R.color.greenTextColor));
+                            }
+
+                        }
+
+
                     }
                 });
                 return patient;
@@ -112,6 +190,33 @@ public class WeekView extends AppCompatActivity {
             e.printStackTrace();
         }
         return null;
+    }
+
+    public void populateVirtualPillBox(String val, TextView t){
+        switch (val){
+            case "taken":
+                t.setBackgroundResource(R.color.greenColor);
+                t.setText("");
+                t.setTextSize(24);
+                break;
+            case "scheduled":
+                t.setBackgroundResource(R.color.greenColor);
+                t.setText("o");
+                t.setTextSize(24);
+                break;
+            case "missed":
+                t.setBackgroundResource(R.color.redColor);
+                t.setText("o");
+                t.setTextSize(24);
+                break;
+            case "overdose":
+                t.setBackgroundResource(R.color.redColor);
+                t.setText("");
+                t.setTextSize(24);
+                break;
+            default:
+                break;
+        }
     }
 }
 

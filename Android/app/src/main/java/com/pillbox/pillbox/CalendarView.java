@@ -71,7 +71,7 @@ public class CalendarView extends AppCompatActivity {
                 response = client.newCall(request).execute();
                 // This the the text obtained from GET request
                 final String myResponse = response.body().string();
-                final String patient, days, am, pm, email, start, end, note;
+                final String am, pm, note;
                 JSONObject jsonObject = new JSONObject(myResponse);
                 // Values
                 am = jsonObject.getString("am");

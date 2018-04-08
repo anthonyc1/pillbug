@@ -5,6 +5,10 @@
     <color name="colorAccent">#FF4081</color>
     <color name="appColor">#F06292</color>
     <color name="whiteColor">#FFFFFF</color>
+    <color name="greenColor">#00FF00</color>
+    <color name="redColor">#FF0000</color>
+    <color name="redTextColor">#c51e1e</color>
+    <color name="greenTextColor">#1ec531</color>
     <color name="blackColor">#000000</color>
     <color name="gradientStart">#F06291</color>
     <color name="gradientEnd">#F8BBD0</color>
