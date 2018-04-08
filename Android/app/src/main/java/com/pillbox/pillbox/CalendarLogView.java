@@ -4,9 +4,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
+import android.widget.CalendarView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.json.JSONObject;
 
@@ -14,7 +18,13 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-public class CalendarView extends AppCompatActivity {
+import java.util.Calendar;
+
+import com.prolificinteractive.materialcalendarview.CalendarDay;
+import com.prolificinteractive.materialcalendarview.MaterialCalendarView;
+import com.prolificinteractive.materialcalendarview.OnDateSelectedListener;
+
+public class CalendarLogView extends AppCompatActivity {
 
     TextView amView, pmView, notesView;
 
@@ -25,17 +35,32 @@ public class CalendarView extends AppCompatActivity {
         amView = (TextView) findViewById(R.id.am);
         pmView = (TextView) findViewById(R.id.pm);
         notesView = (TextView) findViewById(R.id.notes);
+
+        MaterialCalendarView calendarView = findViewById(R.id.calendarView1);
+
+        calendarView.setOnDateChangedListener(new OnDateSelectedListener() {
+            @Override
+            public void onDateSelected(@NonNull MaterialCalendarView widget, @NonNull CalendarDay date, boolean selected) {
+                if (date.getYear() == 2018 && date.getMonth()+1 == 4){
+                    if (date.getDay() == 8) {
+                        //Log.w("LOL", "got the 4/8");
+                        new CalendarLogView.OkHttpAync().execute(CalendarLogView.this.getApplicationContext(), "get", "");
+                        //Toast.makeText(CalendarLogView.this, "got it", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+        });
     }
 
     public void viewWeek(View v){
-        startActivity(new Intent(CalendarView.this, WeekView.class));
+        startActivity(new Intent(CalendarLogView.this, WeekView.class));
     }
     public void logout(View v){
-        startActivity(new Intent(CalendarView.this, MainActivity.class));
+        startActivity(new Intent(CalendarLogView.this, MainActivity.class));
     }
 
     public void getHttp(View v) {
-        Object name = new CalendarView.OkHttpAync().execute(this, "get", "");
+        Object name = new CalendarLogView.OkHttpAync().execute(this.getApplicationContext(), "get", "");
         //myText.setText(name.toString());
     }
 
@@ -78,7 +103,7 @@ public class CalendarView extends AppCompatActivity {
                 pm = jsonObject.getString("pm");
                 note = jsonObject.getString("note");
                 // Output to activity
-                CalendarView.this.runOnUiThread(new Runnable() {
+                CalendarLogView.this.runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
                         amView.setText("AM: "+am);

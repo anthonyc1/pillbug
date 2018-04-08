@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.CalendarView;
 import android.widget.GridView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -62,7 +63,7 @@ public class WeekView extends AppCompatActivity {
     }
 
     public void viewCalendar(View v) {
-        startActivity(new Intent(WeekView.this, CalendarView.class));
+        startActivity(new Intent(WeekView.this, CalendarLogView.class));
     }
 
     public void logout(View v){
