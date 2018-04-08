@@ -27,9 +27,9 @@ import com.prolificinteractive.materialcalendarview.OnDateSelectedListener;
 public class CalendarLogView extends AppCompatActivity {
 
     TextView amView, pmView, notesView, dateView;
-    String url1 = "https://webhooks.mongodb-stitch.com/api/client/v2.0/app/pillbugapp-ylegd/service/addSchedule/incoming_webhook/getSchedule?secret=panda";
-    String url2 = "https://webhooks.mongodb-stitch.com/api/client/v2.0/app/pillbugapp-ylegd/service/addSchedule/incoming_webhook/getSchedule?secret=panda";
-    String url3 = "https://webhooks.mongodb-stitch.com/api/client/v2.0/app/pillbugapp-ylegd/service/addSchedule/incoming_webhook/getSchedule?secret=panda";
+    String url1 = "https://webhooks.mongodb-stitch.com/api/client/v2.0/app/pillbugapp-ylegd/service/addSchedule/incoming_webhook/calendar1?secret=panda";
+    String url2 = "https://webhooks.mongodb-stitch.com/api/client/v2.0/app/pillbugapp-ylegd/service/addSchedule/incoming_webhook/calendar2?secret=panda";
+    String url3 = "https://webhooks.mongodb-stitch.com/api/client/v2.0/app/pillbugapp-ylegd/service/addSchedule/incoming_webhook/calendar3?secret=panda";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,13 +48,13 @@ public class CalendarLogView extends AppCompatActivity {
                 if (date.getYear() == 2018 && date.getMonth()+1 == 4){
                     if (date.getDay() == 6) {
                         //Log.w("LOL", "got the 4/8");
-                        new CalendarLogView.OkHttpAync().execute(CalendarLogView.this.getApplicationContext(), "get", url1);
+                        new CalendarLogView.OkHttpAync().execute(CalendarLogView.this.getApplicationContext(), "get", url3);
                         Toast.makeText(CalendarLogView.this, "got it", Toast.LENGTH_SHORT).show();
                     } else if (date.getDay() == 7) {
                         new CalendarLogView.OkHttpAync().execute(CalendarLogView.this.getApplicationContext(), "get", url2);
                         Toast.makeText(CalendarLogView.this, "got it", Toast.LENGTH_SHORT).show();
                     } else if (date.getDay() == 8){
-                        new CalendarLogView.OkHttpAync().execute(CalendarLogView.this.getApplicationContext(), "get", url3);
+                        new CalendarLogView.OkHttpAync().execute(CalendarLogView.this.getApplicationContext(), "get", url1);
                         Toast.makeText(CalendarLogView.this, "got it", Toast.LENGTH_SHORT).show();
                     }
                 }
