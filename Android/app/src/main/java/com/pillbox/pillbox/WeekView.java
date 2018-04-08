@@ -34,11 +34,11 @@ public class WeekView extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.week_view);
-        patientView = (TextView) findViewById(R.id.patientText);
-        statusView = (TextView) findViewById(R.id.statusText);
-        amView = (TextView) findViewById(R.id.amText);
-        pmView = (TextView) findViewById(R.id.pmText);
-        notesView = (TextView) findViewById(R.id.notesText);
+        patientView = (TextView) findViewById(R.id.patient);
+        statusView = (TextView) findViewById(R.id.status);
+        amView = (TextView) findViewById(R.id.am);
+        pmView = (TextView) findViewById(R.id.pm);
+        notesView = (TextView) findViewById(R.id.notes);
     }
 
     public void viewCalendar(View v) {
@@ -85,23 +85,19 @@ public class WeekView extends AppCompatActivity {
                 final String patient, days, am, pm, email, start, end, note;
                 JSONObject jsonObject = new JSONObject(myResponse);
                 // Values
-                email = jsonObject.getString("email");
-                days = jsonObject.getString("days");
                 am = jsonObject.getString("am");
                 pm = jsonObject.getString("pm");
-                start = jsonObject.getString("start");
-                end = jsonObject.getString("end");
                 note = jsonObject.getString("note");
                 patient = jsonObject.getString("patient");
                                             // Output to activity
                 WeekView.this.runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        patientView.setText(patient);
-//                        statusView.setText(status);
-                        amView.setText(am);
-                        pmView.setText(pm);
-                        notesView.setText(note);
+                        patientView.setText("Patient: "+patient);
+//                        statusView.setText("Status: "+status);
+                        amView.setText("AM: "+am);
+                        pmView.setText("PM: "+pm);
+                        notesView.setText("Note: "+note);
                     }
                 });
                 return patient;

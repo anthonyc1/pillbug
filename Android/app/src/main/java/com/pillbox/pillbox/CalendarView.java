@@ -22,9 +22,9 @@ public class CalendarView extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.calendar_view);
-        amView = (TextView) findViewById(R.id.amText);
-        pmView = (TextView) findViewById(R.id.pmText);
-        notesView = (TextView) findViewById(R.id.notesText);
+        amView = (TextView) findViewById(R.id.am);
+        pmView = (TextView) findViewById(R.id.pm);
+        notesView = (TextView) findViewById(R.id.notes);
     }
 
     public void viewWeek(View v){
@@ -78,9 +78,9 @@ public class CalendarView extends AppCompatActivity {
                 CalendarView.this.runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        amView.setText(am);
-                        pmView.setText(pm);
-                        notesView.setText(note);
+                        amView.setText("AM: "+am);
+                        pmView.setText("PM: "+pm);
+                        notesView.setText("Note: "+note);
                     }
                 });
                 return am;
