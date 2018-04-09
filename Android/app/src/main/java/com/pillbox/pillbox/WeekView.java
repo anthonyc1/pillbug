@@ -120,7 +120,7 @@ public class WeekView extends AppCompatActivity {
                 note = jsonObject.getString("note");
                 patient = jsonObject.getString("patient");
 
-                daysJSONArray = jsonObject.getJSONArray("days");
+                daysJSONArray = jsonObject.getJSONArray("alerts");
                 int length = daysJSONArray.length();
                 daysArray = new String[length];
 
