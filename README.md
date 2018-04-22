@@ -23,3 +23,18 @@ What's next for PillBug is a rotatable camera that to capture images of nearby s
 
 # Check us out on Devpost!
 https://devpost.com/software/pillbug-nfxm54
+
+# Post-hackathon update #1
+The mobile application has been redesigned using material design. Here are some snapshots!  
+
+<p float="left">
+<img src="https://github.com/anthonyc1/pillbug/blob/master/screenshots/login.png" width="150px">
+<img src="https://github.com/anthonyc1/pillbug/blob/master/screenshots/weeklyview.png" width="150px">
+<img src="https://github.com/anthonyc1/pillbug/blob/master/screenshots/weeklyviewdata.png" width="150px">
+</p>
+
+<p float="left">
+<img src="https://github.com/anthonyc1/pillbug/blob/master/screenshots/navigation.png" width="150px">
+<img src="https://github.com/anthonyc1/pillbug/blob/master/screenshots/calendarview.png" width="1500px">
+<img src="https://github.com/anthonyc1/pillbug/blob/master/screenshots/calendarviewdata.png" width="150px">
+</p>
