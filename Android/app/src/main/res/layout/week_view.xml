@@ -77,7 +77,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/montserrat"
             android:text="@string/curr_month"
-            android:textColor="@color/blackColor"/>
+            android:textColor="@color/blackColor"
             android:textSize="20sp" />
         <Space
             android:layout_width="wrap_content"
@@ -108,78 +108,51 @@
             android:layout_height="wrap_content"
             android:layout_weight="1" />
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif"
+            style="@style/DayOfWeekStyle"
             android:text="S"
-            android:textSize="24sp"
-            android:textColor="@color/blackColor"/>/>
+            />/>
         <Space
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif"
-            android:text="M"
-            android:textSize="24sp"
-            android:textColor="@color/blackColor"/>/>
+            style="@style/DayOfWeekStyle"
+            android:text="M" />
         <Space
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif"
-            android:text="Tu"
-            android:textSize="24sp"
-            android:textColor="@color/blackColor"/>/>
+            style="@style/DayOfWeekStyle"
+            android:text="Tu" />
         <Space
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif"
-            android:text="W"
-            android:textSize="24sp"
-            android:textColor="@color/blackColor"/>/>
+            style="@style/DayOfWeekStyle"
+            android:text="W" />
         <Space
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif"
-            android:text="Th"
-            android:textSize="24sp"
-            android:textColor="@color/blackColor"/>/>
+            style="@style/DayOfWeekStyle"
+            android:text="Th" />
         <Space
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif"
-            android:text="F"
-            android:textSize="24sp"
-            android:textColor="@color/blackColor"/>
+            style="@style/DayOfWeekStyle"
+            android:text="F" />
         <Space
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif"
-            android:text="S"
-            android:textSize="24sp"
-            android:textColor="@color/blackColor"/>/>
+            style="@style/DayOfWeekStyle"
+            android:text="S" />
         <Space
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

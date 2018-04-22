@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void login(View v){
-        startActivity(new Intent(MainActivity.this, WeekView.class));
+        startActivity(new Intent(MainActivity.this, WeekView2.class));
     }
 
 }

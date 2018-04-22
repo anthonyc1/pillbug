@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="31111a25-9ccf-48e4-b07f-43ad93ea739c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Android/.idea/caches/build_file_checksums.ser" afterPath="$PROJECT_DIR$/Android/.idea/caches/build_file_checksums.ser" />
-      <change beforePath="$PROJECT_DIR$/Android/app/build.gradle" afterPath="$PROJECT_DIR$/Android/app/build.gradle" />
-      <change beforePath="$PROJECT_DIR$/Android/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/Android/app/src/main/AndroidManifest.xml" />
-      <change beforePath="$PROJECT_DIR$/Android/app/src/main/java/com/pillbox/pillbox/CalendarView.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Android/app/src/main/java/com/pillbox/pillbox/WeekView.java" afterPath="$PROJECT_DIR$/Android/app/src/main/java/com/pillbox/pillbox/WeekView.java" />
-      <change beforePath="$PROJECT_DIR$/Android/app/src/main/res/layout/calendar_view.xml" afterPath="$PROJECT_DIR$/Android/app/src/main/res/layout/calendar_view.xml" />
-      <change beforePath="$PROJECT_DIR$/pictures/calendar_filled.jpg" afterPath="$PROJECT_DIR$/pictures/calendar_filled.jpg" />
-    </list>
+    <list default="true" id="31111a25-9ccf-48e4-b07f-43ad93ea739c" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,7 +24,7 @@
     <option name="height" value="696" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="AndroidView" proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -46,10 +38,20 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="pillbug" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pillbug" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="AndroidView" />
     </panes>
   </component>
