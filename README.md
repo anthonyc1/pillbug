@@ -35,6 +35,6 @@ The mobile application has been redesigned using material design. Here are some 
 
 <p float="left">
 <img src="https://github.com/anthonyc1/pillbug/blob/master/screenshots/navigation.png" width="150px">
-<img src="https://github.com/anthonyc1/pillbug/blob/master/screenshots/calendarview.png" width="1500px">
+<img src="https://github.com/anthonyc1/pillbug/blob/master/screenshots/calendarview.png" width="150px">
 <img src="https://github.com/anthonyc1/pillbug/blob/master/screenshots/calendarviewdata.png" width="150px">
 </p>
