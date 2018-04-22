@@ -1,5 +1,20 @@
 # pillbug
 
+# Post-hackathon update #1
+The mobile application has been redesigned using material design. Here are some snapshots!  
+
+<p float="left">
+<img src="https://github.com/anthonyc1/pillbug/blob/master/screenshots/login.png" width="150px">
+<img src="https://github.com/anthonyc1/pillbug/blob/master/screenshots/weeklyview.png" width="150px">
+<img src="https://github.com/anthonyc1/pillbug/blob/master/screenshots/weeklyviewdata.png" width="150px">
+</p>
+
+<p float="left">
+<img src="https://github.com/anthonyc1/pillbug/blob/master/screenshots/navigation.png" width="150px">
+<img src="https://github.com/anthonyc1/pillbug/blob/master/screenshots/calendarview.png" width="150px">
+<img src="https://github.com/anthonyc1/pillbug/blob/master/screenshots/calendarviewdata.png" width="150px">
+</p>
+
 # Inspiration
 When brainstorming for hackathon ideas, we all wanted to create a product or service that would be helpful to many people. While there are countless hacks aimed towards millennials, we wanted to take this hackathon as an opportunity to create a useful hack for the elderly. One of our team members recalled a scary incident where his grandfather overdosed on medication after forgetting that he already took the medicine. The grandfather was taken to the ER as a result. Thankfully, while no permanent damage happened to grandpa, his grandson really want to create a product to prevent this from happening again. Meet - the smart pillbox.
 
@@ -23,18 +38,3 @@ What's next for PillBug is a rotatable camera that to capture images of nearby s
 
 # Check us out on Devpost!
 https://devpost.com/software/pillbug-nfxm54
-
-# Post-hackathon update #1
-The mobile application has been redesigned using material design. Here are some snapshots!  
-
-<p float="left">
-<img src="https://github.com/anthonyc1/pillbug/blob/master/screenshots/login.png" width="150px">
-<img src="https://github.com/anthonyc1/pillbug/blob/master/screenshots/weeklyview.png" width="150px">
-<img src="https://github.com/anthonyc1/pillbug/blob/master/screenshots/weeklyviewdata.png" width="150px">
-</p>
-
-<p float="left">
-<img src="https://github.com/anthonyc1/pillbug/blob/master/screenshots/navigation.png" width="150px">
-<img src="https://github.com/anthonyc1/pillbug/blob/master/screenshots/calendarview.png" width="150px">
-<img src="https://github.com/anthonyc1/pillbug/blob/master/screenshots/calendarviewdata.png" width="150px">
-</p>
